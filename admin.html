@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Card</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+<form action="/set" method="post">
+        <div class="course-content">
+            <h1>Admin Portal</h1>
+            <div>
+                <label for="heading">heading</label>
+                <input type="text" id="heading" name="heading" required>
+            </div>
+            <div>
+                <label for="description">description</label>
+                <input type="text" id="description" name="description" required>
+            </div>
+            <div>
+                <label for="price">price</label>
+                <input type="number" id="price" name="price" required>
+            </div>
+            <button type="submit" >set now</button>
+</form>
+</body>
+</html>

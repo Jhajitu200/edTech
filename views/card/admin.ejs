@@ -1,0 +1,101 @@
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.course-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    margin: 20px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+}
+
+.course-card img {
+    width: 100%;
+    height: auto;
+}
+
+.course-content {
+    padding: 20px;
+}
+
+.course-content h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.course-content p {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.course-content .price {
+    font-size: 1.2em;
+    color: #e67e22;
+    margin: 10px 0;
+}
+
+.course-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #e67e22;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.course-content .btn:hover {
+    background-color: #d35400;
+}
+
+</style>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Card</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+<form action="/set" method="post">
+        <div class="course-content">
+            <h1>Admin Portal</h1>
+            <div>
+                <label for="heading">heading</label>
+                <input type="text" id="heading" name="heading" required>
+            </div>
+            <div>
+                <label for="description">description</label>
+                <input type="text" id="description" name="description" required>
+            </div>
+            <div>
+                <label for="price">price</label>
+                <input type="number" id="price" name="price" required>
+            </div>
+            <button type="submit" >set now</button>
+</form>
+</body>
+</html>

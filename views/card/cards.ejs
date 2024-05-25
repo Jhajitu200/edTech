@@ -1,0 +1,99 @@
+<!-- <style>
+    /* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin: 0;
+    color: #333;
+}
+
+.card-description {
+    margin: 8px 0 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.card-button {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.card-button:hover {
+    background-color: #0056b3;
+}
+
+</style> -->
+
+
+
+
+<diV id="main">
+
+<div class="card" style="display: none;">
+    <img src="https://via.placeholder.com/300" alt="Card Image" class="card-img">
+    <div class="card-content">
+        <form action="/buy" method="post">
+        <h2 class="card-title"></h2>
+        <p class="card-description">
+        </p>
+        <p class="price"></p>
+        <button type="submit" >Buy Now</button>"
+    </form>
+    </div>
+</div>
+</diV>
+
+<script>
+    const collection = require('./../../course_mongodb');
+    async function data(){
+        const data = await collection.find({}).toArray();
+        console.log(data);
+    for(let i = 0; i <data.length; i++) {
+        let card=document.getElementsByClassName('card')[0].cloneNode(true);
+        card.childNodes[1][0][0].textContent = data[i].heading;
+        card.childNodes[1][0][1].textContent = data[i].description;
+        card.childNodes[1][0][2].textContent = data[i].price;
+        card.style.display='block';
+        document.getElementById('main').appendChild(card);
+    }
+    }
+    data();
+</script>
