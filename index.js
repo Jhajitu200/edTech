@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const user = require('./mongodb/user');
 const course = require('./mongodb/course');
 const app = express();
+
 const  bodyParser = require('body-parser');
 console.log(`this is user ${user}`)
 console.log(`this is course ${course}`)
